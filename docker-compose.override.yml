@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  storedb:
+    container_name: storedb
+    environment:
+      - MSSQL_SA_PASSWORD=yourStrong(!)Password
+      - ACCEPT_EULA=Y
+    restart: always
+    ports:
+        - "1433:1433"

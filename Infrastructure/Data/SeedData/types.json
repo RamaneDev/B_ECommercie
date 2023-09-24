@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 1,
+    "Name": "Televison"
+  },
+  {
+    "Id": 2,
+    "Name": "Smart phone"
+  },
+  {
+    "Id": 3,
+    "Name": "Laptop"
+  }
+]
