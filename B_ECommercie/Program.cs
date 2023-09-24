@@ -1,3 +1,9 @@
+using Infrastructure;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
 namespace B_ECommercie
 {
     public class Program
@@ -9,6 +15,8 @@ namespace B_ECommercie
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddDbContext<StoreDbContext>(option => option.UseSqlServer(builder.Configuration["ConnectionStrings:SqlServerConnectionString"]));
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
